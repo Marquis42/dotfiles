@@ -9,5 +9,6 @@
         - .stalonetrayrc
         - .xmobarrc
         - .xmonad/xmonad.hs
+        - .vimrc.before.local
   roles:
     - { role:  geerlingguy.dotfiles }
