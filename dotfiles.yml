@@ -10,5 +10,6 @@
         - .xmobarrc
         - .xmonad/xmonad.hs
         - .vimrc.before.local
+        - .config/powerline/config.json
   roles:
     - { role:  geerlingguy.dotfiles }
