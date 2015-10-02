@@ -1,0 +1,18 @@
+Config { font = "-misc-fixed-*-*-*-*-20-*-*-*-*-*-*-*"
+       , borderColor = "white"
+       , border = TopB
+       , bgColor = "white"
+       , fgColor = "black"
+       , position = BottomSize L 93 24 
+       , lowerOnStart = True
+       , commands = [Run Network "em1" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Swap [] 10
+    		    , Run Date "%a %b %_d %Y %I:%M:%S%P" "date" 10
+		    , Run CoreTemp ["-t", "Temp:<core0>|<core1>C","-L", "40", "-H", "60","-l", "lightblue", "-n","green", "-h", "red"] 50
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%cpu% | %coretemp% | %memory% * %swap% | %em1% }{ <fc=#000000>%date%</fc> "
+       }

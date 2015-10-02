@@ -1,0 +1,13 @@
+- hosts: localhost
+vars:
+    dotfiles_repo "git@github.com:Marquis42/dotfiles.git"
+    dotfiles_repo_local_destination: "~/src/dotfiles"
+    dotfiles_files:
+        - .bash_profile
+        - .bashrc
+        - .xsession
+        - .stalonetrayrc
+        - .xmobarrc
+        - .xmonad/xmonad.hs
+roles:
+    - { role:  geerlingguy.dotfiles }
